@@ -13,6 +13,7 @@ form{
     border: 12px solid red;
     border-radius: 20px 12px 21px;
     justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 input[type="text"],
 input[type="password"],
@@ -23,6 +24,13 @@ input[type="button"]
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
     padding: 10px;
+    border: 1px solid #ccc
+}
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="button"]:hover {
+    border-color: #007BFF; 
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); 
 }
 #btn{
     background-color:#f13e12;
@@ -33,4 +41,5 @@ input[type="button"]
 #btn:hover{
     background-color: aquamarine;
     padding: 12px;
+    border-color: aqua;
 }
