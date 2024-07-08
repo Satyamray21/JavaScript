@@ -13,7 +13,7 @@ const user=(username,password)=>{
         }
         else
         {
-            rej("Invaild userName or Password");
+            rej("Invaild UserName or Password");
         }
      },15000);
     });
@@ -30,7 +30,7 @@ const handleEvent = async(event)=>{
      }
      catch(error)
      {
-        message.innerText="Login UnScussessfull" + error;
+        message.innerText="Login Unscussessfull " + error;
      }
 
 };
