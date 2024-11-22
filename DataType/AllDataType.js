@@ -2,4 +2,4 @@
 // non primitive 1.Array 2.Object 3.Function
 let number = 100;
 let isCondition = true;
-console.table([number,isCondition]);
+console.table([number,isCondition,typeof(number),typeof(isCondition)]);
