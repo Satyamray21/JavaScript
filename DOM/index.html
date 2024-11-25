@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter Example</title>
+</head>
+<body>
+  <h1 id="dom">Dom Manipulation</h1>
+  <p id="para1">JavaScript</p>
+  <div class="parent">Weekdays</div>
+  <div class="day">Monday</div>
+  <div class="day">Tuesday</div>
+  <div class="day">Wednesday</div>
+  <div class="day">Thrusday</div>
+  <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Example.jpg/800px-Example.jpg" alt="Image will appear here" width="300">
+  <input id="name" placeholder="Enter name" type="text">
+
+  <script>
+    let id = document.getElementById('dom');
+   // console.log(id);
+    let c = document.getElementsByClassName('parent');
+   // console.log(c);
+    let tag = document.getElementsByTagName('div');
+    //console.log(tag);
+    let first = document.querySelector('div');
+    first.innerText="Hello dom manipulation";
+   // console.log(first);
+   let p = document.querySelector('#para1');
+   //console.log(p);
+   p.innerHTML='JavaScript is awesome';
+   let image = document.querySelector('#image');
+   //console.log(image);
+   image.setAttribute('src', 'https://static.vecteezy.com/system/resources/previews/011/063/921/non_2x/example-button-speech-bubble-example-colorful-web-banner-illustration-vector.jpg');
+    let name =document.querySelector('#name');
+    name.setAttribute('placeholder','Please Enter your name');
+  </script>
+</body>
+</html>
