@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Basics</title>
+</head>
+<body>
+    <input type="'text" placeholder="Please Enter somethig.." id="input">
+    <button id="btn1">Hey</button>
+    <div>Monday</div>
+    <div>Tuesday</div>
+    <div>Wednesday</div>
+    <script>
+        let divs = document.querySelectorAll('div');
+        
+        divs.forEach((di) => {
+            di.addEventListener('mouseover', (e) => {
+                di.style.backgroundColor = 'yellow'; // Change background to yellow when mouse enters
+            });
+            
+            di.addEventListener('mousedown', (e) => {
+                di.style.backgroundColor = 'white'; // Change background to white when mouse is pressed
+            });
+    
+            // Optional: Add 'mouseup' to restore the color when mouse is released
+            di.addEventListener('mouseup', (e) => {
+                di.style.backgroundColor = ''; // Reset to default color
+            });
+    
+            // Optional: Add 'mouseout' to reset when mouse leaves the div
+            di.addEventListener('mouseout', (e) => {
+                di.style.backgroundColor = ''; // Reset to default color when mouse leaves
+            });
+
+        });
+        let inputFeild = document.querySelector('#input');
+        inputFeild.addEventListener('input',(e)=>{
+            e.preventDefault();
+            console.log(inputFeild.value)
+        })
+        let div2 = document.querySelectorAll('div');
+        div2.forEach((d) => {
+            d.addEventListener('mouseover',(e)=>{
+            e.preventDefault();
+            console.log(e.clientX,e.clientY);
+            
+        })
+        })
+        
+    </script>
+</body>
+</html>
