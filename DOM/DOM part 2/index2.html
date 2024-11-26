@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation-2</title>
+</head>
+<body>
+    <h1>Dom manipulation</h1>
+<ul>
+    
+</ul>
+    <script>
+   
+   // li.innerHTML='javaScript';
+   let ul = document.querySelector('ul');
+  // ul.appendChild(li);
+   let a = ["Item 1", "Item 2", "Item 3"];
+   a.forEach((val)=>{
+    let l = document.createElement('li');
+    l.innerText=val;
+    ul.appendChild(l);
+   })
+  
+    </script>
+</body>
+</html>
