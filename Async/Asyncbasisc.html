@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <button id="btn1">Start<br/>
+        <button id="btn2">Stop</button>
+        
+    <script>
+        //simple start and stop with sets the interval .
+        let b1 = document.querySelector('#btn1');
+      
+        let b2=document.querySelector('#btn2');
+       let fn = ()=>{
+        console.log('Hello', new Date().toLocaleTimeString());
+       }
+       let intervalId ;
+       b1.addEventListener('click',(e)=>{
+            e.preventDefault();
+           intervalId= setInterval(fn,5000);
+       })
+       b2.addEventListener('click',(e)=>{
+        e.preventDefault();
+        clearInterval(intervalId);
+       })
+    </script>
+</body>
+</html>
