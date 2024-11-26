@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change</title>
+</head>
+<body>
+    <h1>Color Changer</h1>
+    <button type='submit' id='btn1'>Start</button>
+    <button type='submit' id='btn2'>Stop
+    <script>
+    let hexaValue = '0123456789ABCDEF';
+   
+    let colorChange = ()=> {
+        let color = '#';
+        for(let i=0;i<6;i++)
+    {
+        let random = Math.floor(Math.random()*16);
+        color += random;
+    }
+    return color;
+    }
+    const fn = ()=>{
+        body.style.backgroundColor=colorChange();
+    }
+    let body = document.querySelector('body');
+   let btn1 = document.querySelector('#btn1');
+   let intervalId;
+   btn1.addEventListener('click',(e)=>{
+    e.preventDefault();
+   intervalId= setInterval(fn,100);
+
+   })
+   let btn2 = document.querySelector('#btn2');
+   btn2.addEventListener('click',(e)=>{
+    e.preventDefault();
+    clearInterval(intervalId);
+   })
+    </script>
+</body>
+</html>
